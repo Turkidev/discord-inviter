@@ -223,7 +223,7 @@ class inviteTracker extends Event {
         ///
         if (!findInvite) {
           var current = await guildInvites.filter(
-              (inv) => !tempInvites.find((c) => c.code == inv.code)
+              (inv) => tempInvites.find((c) => c.code == inv.code)
             ),
             res = await current.filter((c) =>
               guildInvites.find((inv) => inv.code == c.code)
